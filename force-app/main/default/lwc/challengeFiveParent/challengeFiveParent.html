@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Challenge Five/Six" icon-name="standard:announcement">
+        <div class="slds-grid gutters">
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-combobox
+                    label="Choose a band"
+                    value={selectedBand}
+                    options={bandOptions}
+                    onchange={handleChange}>
+                </lightning-combobox>
+            </div>
+            <template lwc:if={showChild}>
+                <div class="slds-col slds-size_6-of-12 center-content">
+                    <c-challenge-five-child band-name={nameInput} band-image={imageInput}></c-challenge-five-child>
+                </div>
+                <div class="slds-col slds-size_2-of-12" >
+                    <c-challenge-six band-description={descriptionInput} ></c-challenge-six>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

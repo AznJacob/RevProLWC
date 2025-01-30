@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title={headerText} icon-name="standard:record_signature_task">
+
+        <lightning-button label="Show input" onclick={handleClick} ></lightning-button>
+        <template lwc:if={showInput}>
+            <lightning-input label="Change header reactively!" type="text" value={headerText} lwc:ref="input" onchange={handleChange} ></lightning-input>
+        </template>
+    </lightning-card>
+</template>

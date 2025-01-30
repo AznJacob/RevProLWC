@@ -1,0 +1,24 @@
+.default{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    margin-left: 20px;
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+.blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

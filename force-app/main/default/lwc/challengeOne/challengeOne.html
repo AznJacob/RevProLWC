@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Challenge One" icon-name="standard:post">
+        <template iterator:it={inputList}>
+            <p key={it.value}>{it.value}</p>
+        </template>
+
+        <lightning-input label="Enter an item" type="text" value={userInput} lwc:ref="input"></lightning-input>
+        <lightning-button label="Add" onclick={handleClick} ></lightning-button>
+    </lightning-card>
+</template>
