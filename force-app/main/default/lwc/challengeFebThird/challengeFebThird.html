@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Create a case record" icon-name="action:new_child_case">
+        <template lwc:if={showCreateForm}>
+            <lightning-record-form 
+            object-api-name={objectApiName}
+            fields={fields}
+            onsuccess={handleSuccess}>
+        ></lightning-record-form>
+        </template>
+    </lightning-card>
+    <lightning-card title="Case List" icon-name="standard:case">
+        <template lwc:if={cases.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={cases.data}
+                columns={columns}
+                onsave={handleSave}
+                draft-values={draftValues}
+            >
+           </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
